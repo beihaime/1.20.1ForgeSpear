@@ -30,28 +30,27 @@ public class ModItem {
 
     public static final RegistryObject<Item> WOODEN_SPEAR =
             ITEMS.register("wooden_spear",
-                    () -> spear(59, 1, -2.46F, Tiers.WOOD));
+                    () -> spear(59, 0, -2.46F, Tiers.WOOD));
 
     public static final RegistryObject<Item> STONE_SPEAR =
             ITEMS.register("stone_spear",
-                    () -> spear(131, 2, -2.67F, Tiers.STONE));
+                    () -> spear(131, 0, -2.67F, Tiers.STONE));
 
     public static final RegistryObject<Item> IRON_SPEAR =
             ITEMS.register("iron_spear",
-                    () -> spear(250, 3, -2.95F, Tiers.IRON));
+                    () -> spear(250, 0, -2.95F, Tiers.IRON));
 
     public static final RegistryObject<Item> GOLDEN_SPEAR =
             ITEMS.register("golden_spear",
-                    () -> spear(32, 1, -2.95F, Tiers.GOLD));
+                    () -> spear(32, 0, -2.95F, Tiers.GOLD));
 
     public static final RegistryObject<Item> DIAMOND_SPEAR =
             ITEMS.register("diamond_spear",
-                    () -> spear(1561, 4, -3.05F, Tiers.DIAMOND));
+                    () -> spear(1561, 0, -3.05F, Tiers.DIAMOND));
 
     public static final RegistryObject<Item> NETHERITE_SPEAR =
             ITEMS.register("netherite_spear",
-                    () -> spear(2031, 5, -3.13F, Tiers.NETHERITE));
-
+                    () -> spear(2031, 0, -3.13F, Tiers.NETHERITE));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
