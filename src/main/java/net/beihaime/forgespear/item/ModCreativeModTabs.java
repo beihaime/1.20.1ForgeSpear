@@ -16,10 +16,16 @@ public class ModCreativeModTabs {
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, ForgeSpear.MOD_ID);
 
     public static final RegistryObject<CreativeModeTab> SPEAR_TAB = CREATIVE_MOD_TABS.register("forgespear",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.SPEAR.get()))
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItem.DIAMOND_SPEAR.get()))
                     .title(Component.translatable("creativetab.forgespear"))
                     .displayItems((pParameters, pOutput) -> {
-                        pOutput.accept(ModItems.SPEAR.get());
+                        pOutput.accept(ModItem.WOODEN_SPEAR.get());
+                        pOutput.accept(ModItem.STONE_SPEAR.get());
+//                        pOutput.accept(ModItem.COPPER_SPEAR.get());
+                        pOutput.accept(ModItem.IRON_SPEAR.get());
+                        pOutput.accept(ModItem.GOLDEN_SPEAR.get());
+                        pOutput.accept(ModItem.DIAMOND_SPEAR.get());
+                        pOutput.accept(ModItem.NETHERITE_SPEAR.get());
                     })
                     .build() );
     public static void register(IEventBus modEventBus) {

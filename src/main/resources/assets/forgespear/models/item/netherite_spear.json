@@ -1,6 +1,6 @@
 {
   "parent" : "item/generated",
   "textures" : {
-    "layer0" : "forgespear:item/spear"
+    "layer0" : "forgespear:item/netherite_spear"
   }
 }

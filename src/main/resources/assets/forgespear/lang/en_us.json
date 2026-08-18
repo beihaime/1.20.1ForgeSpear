@@ -1,4 +1,10 @@
 {
-  "item.forgespear.spear" : "Spear",
-  "creativetab.forgespear" : "SpearTab"
+  "item.forgespear.wooden_spear" : "Wooden Spear",
+  "item.forgespear.stone_spear" : "Stone Spear",
+  "item.forgespear.copper_spear" : "Copper Spear",
+  "item.forgespear.iron_spear"   : "Iron Spear",
+  "item.forgespear.golden_spear" : "Golden Spear",
+  "item.forgespear.diamond_spear" : "Diamond Spear",
+  "item.forgespear.netherite_spear" : "Netherite Spear",
+  "creativetab.forgespear" : "Spear"
 }

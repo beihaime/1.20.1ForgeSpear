@@ -2,8 +2,7 @@ package net.beihaime.forgespear;
 
 import com.mojang.logging.LogUtils;
 import net.beihaime.forgespear.item.ModCreativeModTabs;
-import net.beihaime.forgespear.item.ModItems;
-import net.minecraft.world.item.CreativeModeTab;
+import net.beihaime.forgespear.item.ModItem;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -12,7 +11,6 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -32,7 +30,7 @@ public class ForgeSpear {
 
         ModCreativeModTabs.register(modEventBus);
 
-        ModItems.register(modEventBus);
+        ModItem.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -48,8 +46,13 @@ public class ForgeSpear {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-            event.accept(ModItems.SPEAR);
+        if(event.getTabKey() == CreativeModeTabs.COMBAT) {
+            event.accept(ModItem.WOODEN_SPEAR);
+            event.accept(ModItem.STONE_SPEAR);
+            event.accept(ModItem.GOLDEN_SPEAR);
+            event.accept(ModItem.IRON_SPEAR);
+            event.accept(ModItem.DIAMOND_SPEAR);
+            event.accept(ModItem.NETHERITE_SPEAR);
         }
     }
 
