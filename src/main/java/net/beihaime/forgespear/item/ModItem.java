@@ -14,43 +14,34 @@ public class ModItem {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, ForgeSpear.MOD_ID);
 
-    private static SwordItem spear(
-            int durability,
-            int attackDamage,
-            float attackSpeed,
-            Tier tier
-    ) {
-        return new SwordItem(
-                tier,
-                attackDamage,
-                attackSpeed,
-                new Item.Properties().durability(durability)
-        );
-    }
-
     public static final RegistryObject<Item> WOODEN_SPEAR =
             ITEMS.register("wooden_spear",
-                    () -> spear(59, 0, -2.46F, Tiers.WOOD));
+                    () -> new SpearItem(59, 0, Tiers.WOOD, -2.46F,new Item.Properties()));
 
     public static final RegistryObject<Item> STONE_SPEAR =
             ITEMS.register("stone_spear",
-                    () -> spear(131, 0, -2.67F, Tiers.STONE));
+                    () -> new SpearItem(131, 0, Tiers.STONE, -2.67F,new Item.Properties()));
 
     public static final RegistryObject<Item> IRON_SPEAR =
             ITEMS.register("iron_spear",
-                    () -> spear(250, 0, -2.95F, Tiers.IRON));
+                    () -> new SpearItem(250, 0, Tiers.IRON, -2.95F, new Item.Properties()));
 
     public static final RegistryObject<Item> GOLDEN_SPEAR =
             ITEMS.register("golden_spear",
-                    () -> spear(32, 0, -2.95F, Tiers.GOLD));
+                    () -> new SpearItem(32, 0, Tiers.GOLD, -2.95F, new Item.Properties()));
+
+    public static final RegistryObject<Item> COPPER_SPEAR =
+            ITEMS.register("copper_spear",
+                    () -> new SpearItem(190,0,Tiers.STONE,-2.82F,new Item.Properties()));
+
 
     public static final RegistryObject<Item> DIAMOND_SPEAR =
             ITEMS.register("diamond_spear",
-                    () -> spear(1561, 0, -3.05F, Tiers.DIAMOND));
+                    () -> new SpearItem(1561, 0, Tiers.DIAMOND, -3.05F, new Item.Properties()));
 
     public static final RegistryObject<Item> NETHERITE_SPEAR =
             ITEMS.register("netherite_spear",
-                    () -> spear(2031, 0, -3.13F, Tiers.NETHERITE));
+                    () -> new SpearItem(2031, 0, Tiers.NETHERITE, -3.13F, new Item.Properties()));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

@@ -21,7 +21,7 @@ public class ModCreativeModTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModItem.WOODEN_SPEAR.get());
                         pOutput.accept(ModItem.STONE_SPEAR.get());
-//                        pOutput.accept(ModItem.COPPER_SPEAR.get());
+                        pOutput.accept(ModItem.COPPER_SPEAR.get());
                         pOutput.accept(ModItem.IRON_SPEAR.get());
                         pOutput.accept(ModItem.GOLDEN_SPEAR.get());
                         pOutput.accept(ModItem.DIAMOND_SPEAR.get());

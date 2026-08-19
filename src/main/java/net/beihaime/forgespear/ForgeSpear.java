@@ -49,6 +49,7 @@ public class ForgeSpear {
         if(event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ModItem.WOODEN_SPEAR);
             event.accept(ModItem.STONE_SPEAR);
+            event.accept(ModItem.COPPER_SPEAR);
             event.accept(ModItem.GOLDEN_SPEAR);
             event.accept(ModItem.IRON_SPEAR);
             event.accept(ModItem.DIAMOND_SPEAR);
