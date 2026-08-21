@@ -1,0 +1,12 @@
+{
+  "spear_use": {
+    "sounds": [
+      "forgespear:spear_use"
+    ]
+  },
+  "spear_wood_use": {
+    "sounds": [
+      "forgespear:spear_wood_use"
+    ]
+  }
+}

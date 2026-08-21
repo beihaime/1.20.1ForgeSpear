@@ -3,6 +3,7 @@ package net.beihaime.forgespear;
 import com.mojang.logging.LogUtils;
 import net.beihaime.forgespear.item.ModCreativeModTabs;
 import net.beihaime.forgespear.item.ModItem;
+import net.beihaime.forgespear.sound.ModSounds;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -31,6 +32,9 @@ public class ForgeSpear {
         ModCreativeModTabs.register(modEventBus);
 
         ModItem.register(modEventBus);
+        LOGGER.info("ForgeSpear has been initialised");
+
+        ModSounds.SOUNDS.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
