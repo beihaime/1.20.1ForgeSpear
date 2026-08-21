@@ -14,12 +14,27 @@ import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.sounds.SoundEvents;
 
-public class SpearItem extends Item {
+public class SpearItem extends SwordItem {
 
+    private final int durability;
+    private final int attackDamage;
 
-    public SpearItem(Properties pProperties) {
-        super(pProperties);
+    public SpearItem(int durability, int attackDamage, Tier tier, float attackSpeed,Item.Properties properties) {
+        super(tier, attackDamage, attackSpeed,properties.durability(durability));
+
+        this.durability = durability;
+        this.attackDamage = attackDamage;
+
     }
+
+    public int getAttackDamage() {
+        return attackDamage;
+    }
+
+    public int getDurability() {
+        return durability;
+    }
+
     @Override
     public InteractionResultHolder<ItemStack> use(
             Level pLevel,
@@ -51,12 +66,16 @@ public class SpearItem extends Item {
             String itemName = stack.getHoverName().getString();
 
 
-            pPlayer.sendSystemMessage(Component.literal(
-                    playerName
-                    + " used "
-                    + itemName
-                    + " at: "
-                    + String.format("%.2f %.2f %.2f", x,y,z)));
+/*
+Debugging logs
+ */
+
+//            pPlayer.sendSystemMessage(Component.literal(
+//                    playerName
+//                    + " used "
+//                    + itemName
+//                    + " at: "
+//                    + String.format("%.2f %.2f %.2f", x,y,z)));
 
         }
         return InteractionResultHolder.success(stack);
